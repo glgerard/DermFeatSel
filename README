@@ -1,0 +1,83 @@
+Sequential Forward Floating Selection applied to the Dermatology database (https://archive.ics.uci.edu/ml/datasets/Dermatology).
+
+Donor: 
+
+H. Altay Guvenir, 
+Bilkent University, 
+Department of Computer Engineering and Information Science, 
+06533 Ankara, Turkey 
+Phone: +90 (312) 266 4133 
+Email: guvenir '@' cs.bilkent.edu.tr
+
+Credits:
+
+Lichman, M. (2013). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science.
+
+Feature Extraction: Foundations and Applications. Editors: Guyon, I., Gunn, S., Nikravesh, M., Zadeh, L.A. (Eds.). Springer (2006). Reunanen, Juha "Search Strategies" pg.119-136. 
+
+================================================================================
+
+Ouput of knn_feat_sel.py
+
+==== SFFS / kNN / Brier =====
+
+Training proportion of the dataset 50 %
+Features: 23
+Best ones: 31, 7, 19, 26, 3, 14, 5, 24, 9, 10, 15, 16, 28, 6, 8, 25, 12, 27, 29, 33, 22, 20, 21
+SFFS best ( 13 ) 31, 7, 14, 5, 15, 28, 6, 8, 25, 12, 22, 20, 21
+
+Accuracy as evaluated in 10-fold cross validation of the training set
+nbc: (0.934, 0.031), bayes_SFFS: (0.940, 0.034), knn: (0.967, 0.028), knn_SFFS: (0.968, 0.037), svm: (0.962, 0.037), lsvm_SFFS: (0.984, 0.025), svm_SFFS: (0.984, 0.025)
+
+Accuracy as evaluated on the testing set
+nbc: (0.945), bayes_SFFS: (0.934), knn: (0.951), knn_SFFS: (0.951), svm: (0.967), lsvm_SFFS: (0.956), svm_SFFS: (0.951)
+
+
+Training proportion of the dataset 60 %
+Features: 23
+Best ones: 31, 23, 3, 19, 5, 14, 24, 26, 15, 10, 6, 8, 12, 25, 16, 27, 9, 28, 29, 33, 22, 21, 20
+SFFS best ( 12 ) 31, 5, 24, 26, 15, 6, 25, 9, 29, 33, 22, 20
+
+Accuracy as evaluated in 10-fold cross validation of the training set
+nbc: (0.955, 0.015), bayes_SFFS: (0.977, 0.017), knn: (0.964, 0.040), knn_SFFS: (0.991, 0.014), svm: (0.995, 0.010), lsvm_SFFS: (0.977, 0.017), svm_SFFS: (0.995, 0.010)
+
+Accuracy as evaluated on the testing set
+nbc: (0.925), bayes_SFFS: (0.932), knn: (0.938), knn_SFFS: (0.938), svm: (0.973), lsvm_SFFS: (0.959), svm_SFFS: (0.952)
+
+
+Training proportion of the dataset 70 %
+Features: 23
+Best ones: 31, 4, 19, 3, 26, 5, 24, 14, 10, 15, 9, 8, 16, 25, 6, 28, 12, 29, 27, 33, 22, 20, 21
+SFFS best ( 15 ) 31, 26, 5, 24, 14, 15, 9, 8, 28, 12, 29, 27, 33, 22, 21
+
+Accuracy as evaluated in 10-fold cross validation of the training set
+nbc: (0.950, 0.026), bayes_SFFS: (0.961, 0.029), knn: (0.945, 0.019), knn_SFFS: (0.965, 0.027), svm: (0.973, 0.019), lsvm_SFFS: (0.980, 0.015), svm_SFFS: (0.976, 0.014)
+
+Accuracy as evaluated on the testing set
+nbc: (0.900), bayes_SFFS: (0.973), knn: (0.973), knn_SFFS: (0.973), svm: (0.991), lsvm_SFFS: (1.000), svm_SFFS: (0.991)
+
+
+Training proportion of the dataset 80 %
+Features: 23
+Best ones: 31, 19, 7, 3, 26, 24, 14, 5, 10, 15, 28, 9, 16, 8, 6, 12, 25, 29, 27, 33, 22, 20, 21
+SFFS best ( 16 ) 31, 7, 26, 24, 14, 5, 15, 28, 9, 6, 29, 27, 33, 22, 20, 21
+
+Accuracy as evaluated in 10-fold cross validation of the training set
+nbc: (0.962, 0.018), bayes_SFFS: (0.966, 0.020), knn: (0.952, 0.021), knn_SFFS: (0.980, 0.020), svm: (0.983, 0.013), lsvm_SFFS: (0.990, 0.012), svm_SFFS: (0.983, 0.017)
+
+Accuracy as evaluated on the testing set
+nbc: (0.959), bayes_SFFS: (0.959), knn: (0.932), knn_SFFS: (0.959), svm: (0.973), lsvm_SFFS: (0.973), svm_SFFS: (0.973)
+
+
+Training proportion of the dataset 90 %
+Features: 23
+Best ones: 31, 19, 4, 3, 26, 5, 24, 14, 10, 15, 9, 28, 8, 16, 25, 6, 12, 27, 29, 33, 22, 20, 21
+SFFS best ( 13 ) 31, 26, 5, 14, 15, 28, 8, 6, 27, 29, 22, 20, 21
+
+Accuracy as evaluated in 10-fold cross validation of the training set
+nbc: (0.942, 0.034), bayes_SFFS: (0.960, 0.021), knn: (0.951, 0.018), knn_SFFS: (0.976, 0.017), svm: (0.985, 0.018), lsvm_SFFS: (0.988, 0.011), svm_SFFS: (0.985, 0.015)
+
+Accuracy as evaluated on the testing set
+nbc: (1.000), bayes_SFFS: (1.000), knn: (0.973), knn_SFFS: (0.919), svm: (0.973), lsvm_SFFS: (0.973), svm_SFFS: (0.973)
+
+
