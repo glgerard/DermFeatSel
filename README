@@ -1,5 +1,32 @@
 Sequential Forward Floating Selection applied to the Dermatology database (https://archive.ics.uci.edu/ml/datasets/Dermatology).
 
+Implementation based on the Orange Data Mining package
+(http://orange.biolab.si/).
+
+INSTALLATION
+
+To run the tests download all python files and dermatology.csv in your current
+directory. Make sure you have Python 2.7.8 or newer installed. Finally install
+the Orange package (e.g. run pip install orange).
+
+HOW TO RUN
+
+From the directory where you have downloaded the files run
+
+  $ python knn_feat_sel.py
+
+Once you have chosen the list of features based on the results obtained before
+modify line 36 of assess.py to contain the list of selected features. Run
+
+  $ python assess.py
+
+This will compare the results of different learners with and without feature
+selection.
+
+Example output of the two scripts is provided at the end of this file.
+
+================================================================================
+
 Donor: 
 
 H. Altay Guvenir, 
@@ -17,7 +44,7 @@ Feature Extraction: Foundations and Applications. Editors: Guyon, I., Gunn, S., 
 
 ================================================================================
 
-Ouput of knn_feat_sel.py
+Ouput of 'python knn_feat_sel.py'
 
 ==== SFFS / kNN / Brier =====
 
@@ -79,5 +106,51 @@ nbc: (0.942, 0.034), bayes_SFFS: (0.960, 0.021), knn: (0.951, 0.018), knn_SFFS: 
 
 Accuracy as evaluated on the testing set
 nbc: (1.000), bayes_SFFS: (1.000), knn: (0.973), knn_SFFS: (0.919), svm: (0.973), lsvm_SFFS: (0.973), svm_SFFS: (0.973)
+
+================================================================================
+
+Output of 'python assess.py'
+
+Accuracy as evaluated in 10-fold cross validation of the training set.
+svm: (0.975, 0.006), lsvm_SFFS: (0.986, 0.006), ig_svm_SFFS: (0.986, 0.007)
+
+Classifier: svm
+Iteration, Accuracy
+0 0.972972972973
+1 0.972972972973
+2 1.0
+3 0.945945945946
+4 0.972972972973
+5 1.0
+6 0.972222222222
+7 0.972222222222
+8 0.944444444444
+9 1.0
+
+Classifier: lsvm_SFFS
+Iteration, Accuracy
+0 1.0
+1 1.0
+2 1.0
+3 0.945945945946
+4 0.972972972973
+5 1.0
+6 1.0
+7 0.972222222222
+8 0.972222222222
+9 1.0
+
+Classifier: ig_svm_SFFS
+Iteration, Accuracy
+0 1.0
+1 1.0
+2 1.0
+3 0.945945945946
+4 1.0
+5 1.0
+6 1.0
+7 0.972222222222
+8 0.944444444444
+9 1.0
 
 
