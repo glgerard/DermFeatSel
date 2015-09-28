@@ -150,7 +150,9 @@ class SequentialSelectionLearner(Orange.classification.Learner):
         return SubsetLearner(data, features=self.features_subset)         
 
     def J(self, S):  
-        """Runs the evaluation function eval on the subset.
+        """Runs the evaluation function `eval` on the results of
+        the leave-one out testing of the chosen learner, `base_learner`,
+        with the features restricted to the `features_subset`.
         
         :param S: list of :obj:`~Orange.feature.Descriptor`.
         """

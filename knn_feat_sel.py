@@ -3,7 +3,7 @@
 
 It uses a Sequential Forward Floating Selection algorithm.
 The evaluation function is the multi-class Brier score obtained by a
-k-Nearest Neighbor classifier with K=10 and a 10-fold cross validation.
+k-Nearest Neighbor classifier with K=10 and a leave-one out validation.
 
 The process iterates over different training/testing split of the data:
 50-50%, 60-40%, 70-30%, 80-20% and 90-10%.
